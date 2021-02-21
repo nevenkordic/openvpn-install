@@ -315,8 +315,8 @@ server 10.8.0.0 255.255.255.0" > /etc/openvpn/server/server.conf
 			echo 'push "dhcp-option DNS 94.140.15.15"' >> /etc/openvpn/server/server.conf
 		;;	
 		7)
-			echo 'push "dhcp-option DNS 172.105.178.203"' >> /etc/openvpn/server/server.conf
-			echo 'push "dhcp-option DNS 172.105.178.203"' >> /etc/openvpn/server/server.conf	
+			echo 'push "dhcp-option DNS 127.0.0.1 9050"' >> /etc/openvpn/server/server.conf
+			echo 'push "dhcp-option DNS 127.0.0.1 9050"' >> /etc/openvpn/server/server.conf	
 		;;
 	esac
 	echo "keepalive 10 120
