@@ -182,6 +182,7 @@ if [[ ! -e /etc/openvpn/server/server.conf ]]; then
 	echo "   4) OpenDNS"
 	echo "   5) Quad9"
 	echo "   6) AdGuard"
+	echo "   6) Tor"
 	read -p "DNS server [1]: " dns
 	until [[ -z "$dns" || "$dns" =~ ^[1-6]$ ]]; do
 		echo "$dns: invalid selection."
@@ -312,6 +313,9 @@ server 10.8.0.0 255.255.255.0" > /etc/openvpn/server/server.conf
 		6)
 			echo 'push "dhcp-option DNS 94.140.14.14"' >> /etc/openvpn/server/server.conf
 			echo 'push "dhcp-option DNS 94.140.15.15"' >> /etc/openvpn/server/server.conf
+		7)
+			echo 'push "dhcp-option DNS 172.105.178.203"' >> /etc/openvpn/server/server.conf
+			echo 'push "dhcp-option DNS 172.105.178.203"' >> /etc/openvpn/server/server.conf	
 		;;
 	esac
 	echo "keepalive 10 120
